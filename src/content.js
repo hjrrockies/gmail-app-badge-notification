@@ -19,7 +19,7 @@
 	function getAtomFeed() {
 		return new Promise((resolve) => {
 			const x = new XMLHttpRequest();
-			x.open('GET', 'https://mail.google.com/mail/feed/atom?_=' + new Date().getTime(), true);
+			x.open('GET', 'https://mail.google.com/mail/u/1/feed/atom?_=' + new Date().getTime(), true);
 			x.setRequestHeader('Cache-Control', 'no-cache');
 			x.onreadystatechange = function () {
 				if (x.readyState == 4 && x.status == 200) {
